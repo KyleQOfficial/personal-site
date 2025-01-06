@@ -244,9 +244,18 @@ svg {
 .skills-div {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 1rem;
     gap: 5px;
-    width: 220px;
+}
+
+.skills-ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    gap: 25px;
 }
 
 .skills-name-item {
@@ -264,7 +273,7 @@ svg {
     max-height: 100%;
     min-height: 25px;
     min-width: 25px;
-    padding: 0 1rem 0 0;
+    padding: 0 0.4rem 0 0;
 }
 
 .skills-header {
@@ -289,7 +298,7 @@ svg {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 3rem 0 0 0;
+    padding: 3rem 3rem;
 }
 
 .cards-div {
@@ -404,5 +413,39 @@ svg {
 @media screen and (min-width: 750px) {
     .nav-dropdown-div {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .cards-div {
+        width: 800px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .welcome-header-text {
+        font-size: 500%;
+    }
+    .name-header-text {
+        font-size: 250%;
+    }
+    .brief-description {
+        font-size: 125%;
+    }
+    .check-this-out-text {
+        font-size: 120%;
+    }
+    p {
+        font-size: 120%;
+    }
+    h4 {
+        font-size: 120%;
+    }
+    .card {
+        width: 300px;
+        height: 375px;
+    }
+    .cards-div {
+        width: 1400px;
     }
 }
