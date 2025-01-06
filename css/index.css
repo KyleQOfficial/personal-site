@@ -377,6 +377,10 @@ svg {
     padding: 3rem 0 0 0;
 }
 
+footer {
+    height: 200px;
+}
+
 @keyframes arrow-animate {
     0% {
         opacity: 0;
