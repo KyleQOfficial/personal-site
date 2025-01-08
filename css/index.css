@@ -225,7 +225,7 @@ svg {
 .about-me-description {
     padding: 1rem 1rem;
     text-align: center;
-    max-width: 40%;
+    max-width: 80%;
 }
 
 .experience-div {
@@ -420,7 +420,7 @@ footer {
         display: none;
     }
     .about-me-description {
-        max-width: 80%;
+        max-width: 50%;
     }
 }
 
