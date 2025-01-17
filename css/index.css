@@ -1,15 +1,26 @@
+:root {
+    --color-grey: #e0e1dd;
+    --color-hover: #cecece;
+    --color-dark-text: #303030;
+    --color-blue0: #778da9;
+    --color-blue1: #415a77;
+    --color-blue2: #1b263b;
+    --color-dark: #0d1b2a;
+}
+
 html  {
     scroll-behavior: smooth;
+    background-color: var(--color-grey);
 }
 
 .main-header {
     display: flex;
     flex-direction: column;
     position: sticky;
-    background-color: white;
     align-items: center;
     top: 0;
-    box-shadow: inset 0 -1px #616161;;
+    box-shadow: inset 0 -1px var(--color-dark);
+    background-color: var(--color-grey);
     margin: 0;
     border: 0;
     padding: 0;
@@ -54,14 +65,14 @@ html  {
 
 .linkedin-nav-button {
     border: 2px solid;
-    border-color: #616161;
+    border-color: var(--color-dark-text);
     position: relative;
     display: flex;
     margin: 0 0.5rem;
 }
 
 .linkedin-svg {
-    color: #616161;
+    color: var(--color-dark-text);
     width: 1em;
     height: 1em;
     padding: 0.09em;
@@ -86,24 +97,24 @@ svg {
 
 .header-link {
     text-decoration: none;
-    color: #303030;
+    color: var(--color-dark-text);
     padding: 0.5rem 1.75rem;
     border-radius: 1rem;
 }
 
 .header-link:hover {
-    background-color: #efefef;
+    background-color: var(--color-hover);
 }
 
 .dropdown-link {
     text-decoration: none;
-    color: #303030;
+    color: var(--color-dark-text);
     padding: 0.25rem 1rem;
     border-radius: 1rem;
 }
 
 .dropdown-link:hover {
-    background-color: #efefef;
+    background-color: var(--color-hover);
 }
 
 .responsive {
@@ -133,22 +144,22 @@ svg {
 
 .welcome-header-text {
     margin: 0;
-    color: #616161;
-    text-shadow: -1px 1px #000000, 1px -1px #b4b4b4;
+    color: var(--color-blue1);
+    text-shadow: -1px 1px 1px var(--color-dark);
     font-size: 400%;
 }
 
 .name-header-text {
     margin: 0;
-    color: #616161;
-    text-shadow: -1px 1px #000000, 1px -1px #b4b4b4;
+    color: var(--color-blue1);
+    text-shadow: -1px 1px 1px var(--color-dark);
     font-size: 200%;
     white-space: nowrap;
 }
 
 .brief-description {
     margin: 0;
-    color: #616161;
+    color: var(--color-dark-text);
     padding: 1.2rem;
     font-size: 100%;
 }
@@ -161,7 +172,7 @@ svg {
 
 .check-this-out-text {
     margin: 0;
-    color: #616161;
+    color: var(--color-dark-text);
     padding: 1rem;
     font-size: 100%;
     border-radius: 1rem;
@@ -170,7 +181,7 @@ svg {
 }
 
 .check-this-out-text:hover {
-    background-color: #efefef;
+    background-color: var(--color-hover);
 }
 
 .right-arrow {
@@ -190,8 +201,8 @@ svg {
     display: flex;
     width: 0.75rem;
     height: 0.75rem;
-    border-bottom: 2px solid #616161;
-    border-right: 2px solid #616161;
+    border-bottom: 2px solid var(--color-dark);
+    border-right: 2px solid var(--color-dark);
     transform: rotate(45deg);
     opacity: 0;
 }
@@ -219,7 +230,7 @@ svg {
 .profile-pic {
     border-radius: 50%;
     border: 1px solid;
-    border-color: black;
+    border-color: var(--color-dark);
 }
 
 .about-me-description {
@@ -315,7 +326,7 @@ svg {
 .card {
     flex: 0 0 auto;
     border-radius: 1rem;
-    border: 2px solid #616161;
+    border: 2px solid var(--color-dark-text);
     width: 200px;
     height: 250px;
 }
