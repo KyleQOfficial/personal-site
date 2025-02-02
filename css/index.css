@@ -8,12 +8,54 @@
     --color-dark: #0d1b2a;
 }
 
+/* Basic attribute customization */
 html  {
     scroll-behavior: smooth;
     background-color: var(--color-grey);
+    font-family: system-ui;
 }
 
-.main-header {
+h4 {
+    margin: 0;
+    padding: 1rem;
+}
+
+p {
+    margin: 0;
+    padding: 1rem;
+}
+
+svg {
+    max-height: 100%;
+}
+
+/* Short descriptions, 50% of page width */
+.short-description {
+    text-align: center;
+    max-width: 50%;
+    margin: 0;
+    padding: 1rem;
+}
+
+/* Section (no padding)*/
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container (padding)*/
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 0 0 0;
+}
+
+/* Header/Navigation */
+header {
     display: flex;
     flex-direction: column;
     position: sticky;
@@ -26,15 +68,7 @@ html  {
     padding: 0;
 }
 
-.header-ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    flex-direction: row;
-    flex-grow: 1;
-    padding: 0;
-}
-
+/* The main navigation bar holder at the top of the page */
 .header-nav {
     display: flex;
     flex-direction: row;
@@ -45,24 +79,49 @@ html  {
     height: 45px;
 }
 
+/* Unordered list holding main nav links */
+.header-ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Unordered list holding main nav links, seperate because does not get hidden */
+.sub-header-ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Unordered list holding main nav links in the responsive dropdown */
 .dropdown-ul {
     display: flex;
     gap: 0.75rem;
     align-items: flex-end;
     list-style: none;
     flex-direction: column;
-    flex-grow: 1;
     padding: 0;
     margin: 0;
 }
 
-.nav-dropdown-div {
+/* Main div holding the dropdown navigation */
+.dropdown {
     display: none;
+    justify-content: end;
     position: sticky;
     width: 100%;
     padding: 0.5rem 0 1rem 0;
 }
 
+/* Linked-in button */
 .linkedin-nav-button {
     border: 2px solid;
     border-color: var(--color-dark-text);
@@ -71,6 +130,7 @@ html  {
     margin: 0 0.5rem;
 }
 
+/* Linked-in svg */
 .linkedin-svg {
     color: var(--color-dark-text);
     width: 1em;
@@ -78,23 +138,12 @@ html  {
     padding: 0.09em;
 }
 
-svg {
-    max-height: 100%;
-}
-
-.nav-dropdown-icon {
+/* 3 line icon you click to open dropdown */
+.dropdown-icon {
     display: none;
 }
 
-.sub-header-ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
+/* Seperate link class for larger padding and features */
 .header-link {
     text-decoration: none;
     color: var(--color-dark-text);
@@ -102,10 +151,7 @@ svg {
     border-radius: 1rem;
 }
 
-.header-link:hover {
-    background-color: var(--color-hover);
-}
-
+/* Seperate link class for smaller padding and features, since device is smaller */
 .dropdown-link {
     text-decoration: none;
     color: var(--color-dark-text);
@@ -113,27 +159,13 @@ svg {
     border-radius: 1rem;
 }
 
-.dropdown-link:hover {
+/* Changes the background color when a link is hovered */
+.link:hover {
     background-color: var(--color-hover);
 }
 
-.responsive {
-    display: flex;
-}
-
-.main {
-    flex: 1;
-}
-
-.body {
-    display: flex;
-}
-
-* {
-    font-family: system-ui;
-}
-
-.main-intro-div {
+/* Main intro div */
+.intro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,13 +174,15 @@ svg {
     gap: 1.5rem;
 }
 
-.welcome-header-text {
+/* Welcome header text */
+.welcome {
     margin: 0;
     color: var(--color-blue1);
     text-shadow: -1px 1px 1px var(--color-dark);
     font-size: 400%;
 }
 
+/* Full name header text */
 .name-header-text {
     margin: 0;
     color: var(--color-blue1);
@@ -157,19 +191,23 @@ svg {
     white-space: nowrap;
 }
 
+/* One sentence brief description */
 .brief-description {
     margin: 0;
     color: var(--color-dark-text);
     padding: 1.2rem;
     font-size: 100%;
+    text-align: center;
 }
 
-.check-this-out-div {
+/* Hold the "Check This Out" button and arrows */
+.check-this-out-container {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
+/* Check this out text */
 .check-this-out-text {
     margin: 0;
     color: var(--color-dark-text);
@@ -184,10 +222,12 @@ svg {
     background-color: var(--color-hover);
 }
 
+/* Offset the right arrow slightly because it was offset for some reason */
 .right-arrow {
     left: 10px;
 }
 
+/* Arrow holder */
 .animated-arrow {
     display: block;
     position: relative;
@@ -197,6 +237,7 @@ svg {
     top: 0.75rem;
 }
 
+/* Arrow spans, become the actual lines using two borders and transform rotation */
 .animated-arrow span {
     display: flex;
     width: 0.75rem;
@@ -207,7 +248,8 @@ svg {
     opacity: 0;
 }
 
-.check-this-out-div:hover div span {
+/* Arrow animation settings */
+.check-this-out-container:hover div span {
     animation: arrow-animate 1.5s infinite;
 }
 
@@ -219,47 +261,19 @@ svg {
     animation-delay: -0.4s;
 }
 
-.about-me-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 3rem 0 0 0;
-}
-
+/* Profile picture */
 .profile-pic {
     border-radius: 50%;
     border: 1px solid;
     border-color: var(--color-dark);
 }
 
-.about-me-description {
-    padding: 1rem 1rem;
-    text-align: center;
-    max-width: 80%;
+/* Skills/Experience div holder for sizing */
+.experience {
+    max-width: 50%;
 }
 
-.experience-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 3rem 0 0 0;
-}
-
-.experience-body-div {
-    display: flex;
-    flex-direction: row;
-}
-
-.skills-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 3rem;
-    gap: 5px;
-}
-
+/* Unordered list for holding each skill item, using flex wrap to wrap items */
 .skills-ul {
     display: flex;
     justify-content: center;
@@ -270,7 +284,8 @@ svg {
     padding: 0;
 }
 
-.skills-name-item {
+/* Individual skill item */
+.skill-item {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -281,40 +296,17 @@ svg {
     justify-content: flex-start;
 }
 
-.svg-icon {
+/* Sets the size and padding for skill icons */
+.skill-icon {
     max-height: 100%;
     min-height: 25px;
     min-width: 25px;
     padding: 0 0.4rem 0 0;
 }
 
-.skills-header {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.work-div {
-    width: 200px;
-}
-
-.education-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 3rem 0 0 0;
-}
-
-.projects-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 3rem 3rem;
-}
-
-.cards-div {
-    width: 700px;
+/* Card holder setup */
+.card-container {
+    width: 50%;
     display: flex;
     gap: 2rem;
     flex-wrap: nowrap;
@@ -323,6 +315,7 @@ svg {
     overflow-y: hidden;
 }
 
+/* Individual card styling */
 .card {
     flex: 0 0 auto;
     border-radius: 1rem;
@@ -331,66 +324,13 @@ svg {
     height: 250px;
 }
 
-.high-school-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.sub-high-school-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.de-la-salle-logo {
-    padding: 2.5rem;
-}
-
-.asu-logo {
-    padding: 1rem;
-}
-
-.de-la-salle-description {
-    text-align: center;
-    max-width: 600px;
-    margin: 0;
-    padding: 1rem;
-}
-
-.university-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.sub-university-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.university-description {
-    text-align: center;
-    max-width: 600px;
-    margin: 0;
-    padding: 1rem;
-}
-
-.contact-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 3rem 0 0 0;
-}
-
 footer {
     height: 200px;
+}
+
+/* This class is added to reponsive elements to make them visible */
+.responsive {
+    display: flex;
 }
 
 @keyframes arrow-animate {
@@ -407,42 +347,29 @@ footer {
     }
 }
 
+/* Sets properties for responsiveness when screen is small (750px or less) */
 @media screen and (max-width: 750px) {
-    .main-header-div {
+    .header-ul {
         display: none;
     }
-    .nav-dropdown-icon {
+    .dropdown-icon {
         display: flex;
     }
     .header-nav {
         justify-content: right;
     }
-    .cards-div {
-        width: 300px;
-    }
-
-    .high-school-div, .university-div {
-        flex-direction: column;
-    }
 }
 
+/* Makes the nav dropdown invisible when screen is made larger */
 @media screen and (min-width: 750px) {
-    .nav-dropdown-div {
+    .dropdown {
         display: none;
     }
-    .about-me-description {
-        max-width: 50%;
-    }
 }
 
-@media screen and (min-width: 1000px) {
-    .cards-div {
-        width: 800px;
-    }
-}
-
+/* Gives everything a larger font size for larger screens above 1500px */
 @media screen and (min-width: 1500px) {
-    .welcome-header-text {
+    .welcome {
         font-size: 500%;
     }
     .name-header-text {
@@ -454,17 +381,14 @@ footer {
     .check-this-out-text {
         font-size: 120%;
     }
-    p {
+    h4 {
         font-size: 120%;
     }
-    h4 {
+    p {
         font-size: 120%;
     }
     .card {
         width: 300px;
         height: 375px;
-    }
-    .cards-div {
-        width: 1400px;
     }
 }
