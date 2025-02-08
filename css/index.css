@@ -15,6 +15,10 @@ html  {
     font-family: system-ui;
 }
 
+body {
+    margin: 0;
+}
+
 h4 {
     margin: 0;
     padding: 1rem;
@@ -66,6 +70,7 @@ header {
     margin: 0;
     border: 0;
     padding: 0;
+    z-index: 999;
 }
 
 /* The main navigation bar holder at the top of the page */
@@ -315,13 +320,68 @@ header {
     overflow-y: hidden;
 }
 
-/* Individual card styling */
+/* Individual card styling, relative to allow elements to be positioned on top */
 .card {
     flex: 0 0 auto;
     border-radius: 1rem;
     border: 2px solid var(--color-dark-text);
     width: 200px;
     height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background image that is inside the card */
+.card-image {
+    width: inherit;
+    height: inherit;
+    z-index: 0;
+}
+
+/* Text over the image and near the top */
+.card-text {
+    position: absolute;
+    font-size: 150%;
+    width: inherit;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+/* Read more div holding the read more link */
+.read-more {
+    position: absolute;
+    font-size: 140%;
+    width: 100%;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.card-link {
+    color: var(--color-dark-text);
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+    background-color: #e0e1dd85;
+}
+
+.card-text {
+    font-weight: 500;
+    text-shadow: -1px 1px 1px rgb(138, 138, 138);
+}
+
+.card-link:hover {
+    background-color: var(--color-hover);
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
 }
 
 footer {
@@ -357,6 +417,12 @@ footer {
     }
     .header-nav {
         justify-content: right;
+    }
+    .short-description {
+        max-width: 80%;
+    }
+    .experience {
+        max-width: 80%;
     }
 }
 
