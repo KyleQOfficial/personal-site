@@ -80,7 +80,6 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin: 0 1.5rem;
     height: 45px;
 }
 
@@ -102,7 +101,7 @@ header {
     list-style: none;
     flex-direction: row;
     margin: 0;
-    padding: 0;
+    padding: 0 5px;
     border: 0;
 }
 
@@ -276,6 +275,19 @@ header {
 /* Skills/Experience div holder for sizing */
 .experience {
     max-width: 50%;
+}
+
+/* Individual course item */
+.course-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    min-height: 25px;
+    max-height: 25px;
+    white-space: nowrap;
+    justify-content: flex-start;
+    text-align: center;
 }
 
 /* Unordered list for holding each skill item, using flex wrap to wrap items */
